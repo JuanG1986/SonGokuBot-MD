@@ -57,6 +57,15 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
     chat.nsfw = isEnable          
     break
 
+case 'stickers':
+isAll = true
+if (!isROwner) {
+global.dfail('rowner', m, conn)
+throw false
+}
+bot.stickers = isEnable
+break
+      
 case 'antiprivado':
 isAll = true
 if (!isROwner) {
