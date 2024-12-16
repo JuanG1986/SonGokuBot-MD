@@ -83,6 +83,7 @@ export async function handler(chatUpdate) {
             if (typeof chat !== 'object')
                 global.db.data.chats[m.chat] = {}
             if (chat) {
+                if (!('stickers' in chat)) chat.stickers = false
                 if (!('isBanned' in chat))
                     chat.isBanned = false
                 if (!('bienvenida' in chat))
@@ -108,7 +109,6 @@ export async function handler(chatUpdate) {
             if (typeof settings !== 'object') global.db.data.settings[this.user.jid] = {}
             if (settings) {
                 if (!('self' in settings)) settings.self = false
-                if (!('autoread' in settings)) settings.autoread = false
                 if (!('stickers' in settings)) settings.stickers = false
                 if (!('antiPrivate' in settings)) settings.antiPrivate = false
             } else global.db.data.settings[this.user.jid] = {
