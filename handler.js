@@ -83,7 +83,8 @@ export async function handler(chatUpdate) {
             if (typeof chat !== 'object')
                 global.db.data.chats[m.chat] = {}
             if (chat) {
-                if (!('stickers' in chat)) chat.stickers = false
+                if (!('stickers' in chat)) 
+                    chat.stickers = false
                 if (!('isBanned' in chat))
                     chat.isBanned = false
                 if (!('bienvenida' in chat))
