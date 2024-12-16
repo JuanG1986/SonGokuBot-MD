@@ -9,7 +9,7 @@ let img = await (await fetch(`https://tinyurl.com/299lyvo5`)).buffer()
     forwardedNewsletterMessageInfo: {
       newsletterJid: "120363195436416919@newsletter",
       serverMessageId: 100,
-      newsletterName: namechannel,
+      newsletterName: Dragon Ball canal bots,
     },
     },
   }
